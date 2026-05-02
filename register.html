@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Student Registration Form</h1>
+
+<form action="#" method="POST">
+
+    <!-- Personal Details -->
+    <fieldset>
+        <legend>Personal Details</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        <p>Gender:</p>
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+
+        <label for="photo">Profile Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+
+    </fieldset>
+
+    <!-- Academic Details -->
+    <fieldset>
+        <legend>Academic Details</legend>
+
+        <label for="studentid">Student ID:</label>
+        <input type="text" id="studentid" name="studentid" pattern="[A-Z]{2}[0-9]{6}" required>
+
+        <label for="programme">Programme:</label>
+        <select id="programme" name="programme">
+            <option value="CS">CS</option>
+            <option value="IT">IT</option>
+            <option value="IS">IS</option>
+        </select>
+
+        <label for="year">Year of Study:</label>
+        <input type="number" id="year" name="year" min="1" max="5">
+
+        <p>Specialisation:</p>
+        <label><input type="checkbox" name="specialisation" value="Web"> Web</label>
+        <label><input type="checkbox" name="specialisation" value="Security"> Security</label>
+        <label><input type="checkbox" name="specialisation" value="AI"> AI</label>
+        <label><input type="checkbox" name="specialisation" value="Networks"> Networks</label>
+
+        <label for="about">Tell us about yourself:</label>
+        <textarea id="about" name="about" rows="4" required></textarea>
+
+    </fieldset>
+
+    <!-- Buttons -->
+    <fieldset>
+        <legend>Submit</legend>
+
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+
+    </fieldset>
+
+</form>
+
+</body>
+</html>
